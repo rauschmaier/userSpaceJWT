@@ -61,4 +61,4 @@ im Verzeichnis "frontend" gibt es die index.html, welche nur mittels Authenfizie
    3. Andernfalls soll auf die login.html verwiesen werden.
 
 **Debugging:**
-Nutzen Sie Tools woe Postman, um die API-Anfragen, und derren Antworten zu Testen.
+Nutzen Sie Tools wie Postman, um die API-Anfragen, und derren Antworten zu Testen.
