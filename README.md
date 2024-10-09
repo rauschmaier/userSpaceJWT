@@ -28,4 +28,14 @@
 The diagram shows flow of how we implement User Registration, User Login and Authorization process.
 
 ![spring-boot-jwt-authentication-spring-security-flow](spring-boot-jwt-authentication-spring-security-flow.png)
+## Aufgabe
+im Verzeichnis "frontend" gibt es die index.html, welche nur mittels Authenfizierung zugänglich sein soll.
 
+**Vorbereitung:**
+1. Importieren Sie das Maven Projekt lokal
+2. Springboor benötigt eine Datenbank. Erstellen Sie eine MySQL Datenbank und passen SIe die application.properties in src/main/resources mit Ihren Daten an.
+3. Legen Sie einen Beutzer über den API-Endpoint "localhost:8080/api/auth/signup an (post mit json body: {
+    "username": "newUser7",
+    "email": "test@mail.de",
+    "password": "password123"
+}
