@@ -34,18 +34,21 @@ im Verzeichnis "frontend" gibt es die index.html, welche nur mittels Authenfizie
 **Vorbereitung:**
 1. Importieren Sie das Maven Projekt lokal
 2. Springboor benötigt eine Datenbank. Erstellen Sie eine MySQL Datenbank und passen SIe die application.properties in src/main/resources mit Ihren Daten an.
-3. Legen Sie einen Beutzer über den API-Endpoint "localhost:8080/api/auth/signup an (post mit json body: {
-    "username": "newUser7",
-    "email": "test@mail.de",
-    "password": "password123"
-}
+3. Legen Sie einen Beutzer über den API-Endpoint "localhost:8080/api/auth/signup an (post mit json body: 
+```json
+   {
+       "username": "newUser7",
+       "email": "test@mail.de",
+       "password": "password123"
+   }
+```
 **Login:**
 1. Passen Sie das login Skript so an, das die JSON-Request mit username und password an den signin-Endpoint gesendet werden.
 2. Bei erfolgreicher Anmeldung soll der token der Response im localStorage hinterlegt werden, und auf die index.html verwiesen werden.
 3. Bei fegeschlagener Anmedlung soll eine entsprechende Rückmeldung erfolgen.
 
 **Absicherung der index.html:**
-1. Passen Sie den JS-code der index.html so an, dass folgende API-Anfrage erfolgt und verarbeitet wird:
+1. Passen Sie den JS-code der index.html so an, dass folgende API-Anfrage erfolgt und verarbeitet wird (token ist hierbei der im localStorage hinterlegte JWT-Token, welcher vorher aus dem localStorage geladen werden muss):
    ```json
    fetch('http://localhost:8080/api/test/user', {
                 method: 'GET',
@@ -54,3 +57,8 @@ im Verzeichnis "frontend" gibt es die index.html, welche nur mittels Authenfizie
                 }
             })
    ```
+   2. Bei response.ok (StatusCode 200), soll der HTML-Inhalt dargestellt werden.
+   3. Andernfalls soll auf die login.html verwiesen werden.
+
+**Debugging:**
+Nutzen Sie Tools woe Postman, um die API-Anfragen, und derren Antworten zu Testen.
