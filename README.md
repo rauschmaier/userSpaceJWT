@@ -34,7 +34,7 @@ im Verzeichnis "frontend" gibt es die index.html, welche nur mittels Authenfizie
 **Vorbereitung:**
 1. Importieren Sie das Maven Projekt lokal
 2. Springboor benötigt eine Datenbank. Erstellen Sie eine MySQL Datenbank und passen SIe die application.properties in src/main/resources mit Ihren Daten an.
-3. Legen Sie einen Beutzer über den API-Endpoint "localhost:8080/api/auth/signup an (post mit json body: 
+3. Legen Sie einen Beutzer über den API-Endpoint "localhost:8080/api/auth/signup an (post mit json body): 
 ```json
    {
        "username": "newUser7",
