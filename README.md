@@ -39,3 +39,18 @@ im Verzeichnis "frontend" gibt es die index.html, welche nur mittels Authenfizie
     "email": "test@mail.de",
     "password": "password123"
 }
+**Login:**
+1. Passen Sie das login Skript so an, das die JSON-Request mit username und password an den signin-Endpoint gesendet werden.
+2. Bei erfolgreicher Anmeldung soll der token der Response im localStorage hinterlegt werden, und auf die index.html verwiesen werden.
+3. Bei fegeschlagener Anmedlung soll eine entsprechende Rückmeldung erfolgen.
+
+**Absicherung der index.html:**
+1. Passen Sie den JS-code der index.html so an, dass folgende API-Anfrage erfolgt und verarbeitet wird:
+   ```json
+   fetch('http://localhost:8080/api/test/user', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+   ```
